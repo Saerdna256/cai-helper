@@ -20,6 +20,8 @@ class CustomLogger:
 
     @classmethod
     def init(cls) -> None:
+        if cls.__isActive:
+            return
         cls.__isActive = True
         cls.__logfile = os.path.normpath(Path.joinpath(Path.cwd(), const.LOGFILE))
         
