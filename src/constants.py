@@ -1,5 +1,8 @@
 from enum import Enum
 
+# Enable Loging for pure dev builds
+LOGGING = True
+
 # current version
 VERSION = "0.0.0.1"
 
