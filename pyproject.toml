@@ -1,7 +1,9 @@
 [project]
 name = "cai"
-version = "0.1.0"
+version = "0.0.0.1"
 description = "Hilfsprogramm zum Erstellen der Freitexte eines Pflegegutachtens"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "customtkinter>=5.2.2",
+]
