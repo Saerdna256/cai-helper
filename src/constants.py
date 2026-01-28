@@ -1,5 +1,3 @@
-from enum import Enum
-
 # Enable Loging for pure dev builds
 LOGGING = True
 
@@ -27,6 +25,21 @@ MODS_REASONING = "begruendung.mod"
 MODS_OUTLOOK = "prognose.mod"
 
 # Modes for the main program
-class INSERTMODE(Enum):
-    CHRONOLOGICAL = 'CHRON' # chronological
-    PLACEHOLDER = 'PLACE' # placeholder
+class INSERTMODE:
+    CHRONOLOGICAL = "CHRON" # chronological
+    PLACEHOLDER = "PLACE" # placeholder
+
+# Possible export modes
+class EXPORTMODE:
+    TXT_SINGLE = "txtsingle"
+    TXT_MULTI = "txtmulti"
+    PDF_SINGLE = "pdfsingle"
+    PDF_MULTI = "pdfmulti"
+
+# Defaults for first run / corrupted options file
+class DEFAULT_OPTIONS:
+    INSERTMODE = INSERTMODE.PLACEHOLDER
+    EXPORTMODE = EXPORTMODE.TXT_SINGLE
+    LAST_SAVE_PATH = ""
+    LAST_WINDOW_SIZE = "800x600"
+
