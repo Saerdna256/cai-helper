@@ -2,7 +2,7 @@ import os as os
 from datetime import datetime
 from pathlib import Path
 
-import constants as const
+import cai_constants as const
 
 """
 I don't open the file in the init and close it with another dunction call at
@@ -13,7 +13,7 @@ Since logs should not be enabled on a general use case, I really don't mind abou
 of superfluous filesystem operations / calls
 """
 
-class CustomLogger:    
+class CAICustomLogger:    
     __isActive:bool = False
     __logfile:str = ""
     file: object = None
@@ -50,6 +50,6 @@ class CustomLogger:
 # Crude inline tests following
 
 if __name__ == "__main__":
-    CustomLogger.init()
-    CustomLogger.log_line("Test 1")
-    CustomLogger.log_line("Test 2\nTest 3")
+    CAICustomLogger.init()
+    CAICustomLogger.log_line("Test 1")
+    CAICustomLogger.log_line("Test 2\nTest 3")

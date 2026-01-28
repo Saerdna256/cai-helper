@@ -2,8 +2,8 @@
 from datetime import date
 
 # custom files
-import constants as const
-from  customlogger import CustomLogger as CL
+import cai_constants as const
+from  cai_customlogger import CAICustomLogger as CL
 
 """
 SaveFile is meant as a variable to store an semi-automatically created filename for each
@@ -15,7 +15,7 @@ A creation time is substituted for the name if none is given. This should produc
 with a sufficient probability.
 """
 
-class SaveFileName():
+class CAISaveFileName():
     # default if newly created; with full_filename if created from existing file
     # full_filenme should not include the path, only the filename
     # if a full_filename is supplied the given_name is ignored!

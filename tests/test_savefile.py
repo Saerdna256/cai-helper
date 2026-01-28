@@ -6,11 +6,11 @@ rel_path = os.path.normpath(thisfile + "/../src")
 sys.path.append(rel_path)
 
 from datetime import date
-from savefilename import SaveFileName
+from cai_savefilename import CAISaveFileName
 
 class TestSaveFile(unittest.TestCase):
     def test_basic_use_case(self) -> None:
-        testCase = SaveFileName("test")
+        testCase = CAISaveFileName("test")
         currentDate = date.today().strftime("%Y%m%d")
         currentTime = date.today().strftime("%H%M%S")
         test_given_name = testCase.get_given_name()
@@ -24,7 +24,7 @@ class TestSaveFile(unittest.TestCase):
         self.assertEqual(expected_prop_name, test_prop_name, msg="Propietary save file name not created correctly")
 
     def test_with_empty_name(self) -> None:
-        testCase = SaveFileName("")
+        testCase = CAISaveFileName("")
         currentDate = date.today().strftime("%Y%m%d")
         currentTime = date.today().strftime("%H%M%S")
         test_given_name = testCase.get_given_name()
@@ -39,7 +39,7 @@ class TestSaveFile(unittest.TestCase):
 
 
     def test_from_valid_filename(self) -> None:
-        testCase = SaveFileName("", "20201212-151012_testcase.caf")
+        testCase = CAISaveFileName("", "20201212-151012_testcase.caf")
         test_given_name = testCase.get_given_name()
         expected_given_name = "testcase"
         test_basename = testCase.get_full_filename_base()
@@ -51,7 +51,7 @@ class TestSaveFile(unittest.TestCase):
         self.assertEqual(test_prop_name, expected_full_prop_name)
 
     def test_from_empty_filename(self) -> None:
-        testCase = SaveFileName("", "20201212-151012_.caf")
+        testCase = CAISaveFileName("", "20201212-151012_.caf")
         test_given_name = testCase.get_given_name()
         expected_given_name = ""
         test_basename = testCase.get_full_filename_base()
@@ -64,15 +64,15 @@ class TestSaveFile(unittest.TestCase):
 
     def test_invalid_extension(self) -> None:
         testFilename = "Test.xml"
-        self.assertRaises(ValueError, lambda : SaveFileName("", testFilename))
+        self.assertRaises(ValueError, lambda : CAISaveFileName("", testFilename))
 
     def test_invalid_structure(self) -> None:
         testFilename1, testFilename2 = "13021987.caf", "bla_01011990-121015.caf"
-        self.assertRaises(ValueError, lambda : SaveFileName("", testFilename1))
-        self.assertRaises(ValueError, lambda : SaveFileName("", testFilename2))
+        self.assertRaises(ValueError, lambda : CAISaveFileName("", testFilename1))
+        self.assertRaises(ValueError, lambda : CAISaveFileName("", testFilename2))
 
     def test_change_filename(self)->None:
-        testCase = SaveFileName("test")
+        testCase = CAISaveFileName("test")
         currentDate = date.today().strftime("%Y%m%d")
         currentTime = date.today().strftime("%H%M%S")
         testCase.update_given_name("updated")

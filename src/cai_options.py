@@ -3,8 +3,8 @@ import xml.etree.ElementTree as ET
 import os as os
 from pathlib import Path
 
-import constants as const
-from customlogger import CustomLogger as CL
+import cai_constants as const
+from cai_customlogger import CAICustomLogger as CL
 
 """
 Data structure for holding the general programs options, also contains the functionality to
