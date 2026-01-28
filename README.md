@@ -9,7 +9,7 @@ Die meisten Gutachter*innen nutzen für die genannten Texte zumindest zum Teil T
 
 ## Nutzererfahrung
 
-Im Benutzerverzeichnis wird unter "Dokumente" ein eigener Ordner für das Programm angelegt. In diesem befindet sich die Optionsdatei, optional eventuelle Logs, sowie zwei Unterordner. In einem Unterordner befinden sich die Dokumente mit den angelegten Textbausteinen, in dem anderen die Speicherdateien für die jeweiligen Gutachten. Dieses werden über 21 Tage gespeichert, ältere Dokumente automatisch gelöscht.
+Im Benutzerverzeichnis wird ein eigener Ordner für das Programm angelegt. In diesem befindet sich die Optionsdatei, optional eventuelle Logs, sowie zwei Unterordner. In einem Unterordner befinden sich die Dokumente mit den angelegten Textbausteinen, in dem anderen die Speicherdateien für die jeweiligen Gutachten. Dieses werden über 21 Tage gespeichert, ältere Dokumente automatisch gelöscht.
 
 Das Programm speichert alle relevanten Daten alle 60 Sekunden automatisch, ebenso beim ordnungsgemäßen Verlassen des Programms. Es steht auch eine Schaltfläche zum Speichern zur Verfügung (mit Tastaturkürzel "Strg-S"). Beim Öffnen des Programms wird automatisch das letzte Gutachten präsentiert.
 
